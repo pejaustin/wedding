@@ -3,6 +3,6 @@
 class WelcomeController < ApplicationController
   def index
     @google_maps_url = 'https://goo.gl/maps/nBAxNAsmPSS2'
-    @cool_earth_url = 'https://www.coolearth.org/'
+    @pcrf_url = 'https://pcrf1.app.neoncrm.com/campaign.jsp?campaign=14&fundraiser=1024608&'
   end
 end

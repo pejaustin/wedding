@@ -7,10 +7,13 @@ services:
       POSTGRES_HOST_AUTH_METHOD: trust
     ports:
       - '5432:5432'
-
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
   web:
     build: .
     ports:
       - '3000:3000'
     links:
       - db
+volumes:
+  postgres_data:

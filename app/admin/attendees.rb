@@ -18,6 +18,7 @@ ActiveAdmin.register Attendee do
     column :notes
     column :child
     column :updated_at
+    actions
   end
 
   config.batch_actions = false
