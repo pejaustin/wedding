@@ -22,9 +22,48 @@
         <p><strong>9pm</strong> &mdash; guests not staying at venue depart</p>
         <%= image_tag "dylan.jpg", id: 'side-image' %>
         <h2>Dress code</h2>
-        <p><strong>Cocktail Formal</strong></p>
+        <p><strong>Garden Party Formal</strong></p>
         <p>Dress in your best, but be prepared to spend some time outside, including dinner with the sun setting over the Hudson River.</p>
         <p>We recommend bringing warm shawls and jackets, as May is still a cooler month in the Hudson Valley.</p>
+
+        <div id="dress-code-carousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <%= image_tag "dress_code1.jpg", class: "d-block w-100", alt: "Dress Code Example 1" %>
+            </div>
+            <div class="carousel-item">
+              <%= image_tag "dress_code2.jpg", class: "d-block w-100", alt: "Dress Code Example 2" %>
+            </div>
+            <div class="carousel-item">
+              <%= image_tag "dress_code3.jpg", class: "d-block w-100", alt: "Dress Code Example 3" %>
+            </div>
+            <div class="carousel-item">
+              <%= image_tag "dress_code4.jpg", class: "d-block w-100", alt: "Dress Code Example 4" %>
+            </div>
+            <div class="carousel-item">
+              <%= image_tag "dress_code5.jpg", class: "d-block w-100", alt: "Dress Code Example 5" %>
+            </div>
+            <div class="carousel-item">
+              <%= image_tag "dress_code6.jpg", class: "d-block w-100", alt: "Dress Code Example 6" %>
+            </div>
+            <div class="carousel-item">
+              <%= image_tag "dress_code7.jpg", class: "d-block w-100", alt: "Dress Code Example 7" %>
+            </div>
+            <div class="carousel-item">
+              <%= image_tag "dress_code8.jpg", class: "d-block w-100", alt: "Dress Code Example 8" %>
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#dress-code-carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#dress-code-carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
         <h2>Gifts &amp; Cards</h2>
         <p>We'd be pleased if you made a donation to charity rather than bringing a gift. Our goal is to raise $5,000 for <%= link_to 'Palestinian Children\'s relief fund', @pcrf_url %>, who are working to get specialized medical and surgical care for palestinian children injured in the war on Gaza.</p>
         <p class="text-center"><%= link_to 'Donate to PCRF', @pcrf_url, class: 'btn btn-primary wedding-cta-btn' %></p>
