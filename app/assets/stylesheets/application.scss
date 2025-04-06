@@ -63,3 +63,28 @@ h2 {
 .wedding-required {
   color: theme-color("primary");
 }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: transparent; // Ensure no background color
+  background-image: none; // Remove default background image
+}
+
+.carousel-control-prev-icon::after,
+.carousel-control-next-icon::after {
+  content: ''; // Clear any default content
+  display: inline-block;
+  width: 30px; // Adjust arrow size as needed
+  height: 30px;
+  border: solid #000; // Arrow color
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg); // Default for "next" arrow
+}
+
+.carousel-control-prev-icon::after {
+  transform: rotate(-135deg); // Rotate for "previous" arrow
+}
+
+.carousel-control-next-icon::after {
+  transform: rotate(45deg); // Rotate for "next" arrow
+}
