@@ -1,8 +1,10 @@
 FROM ruby:2.7.1
 
-RUN apt-get update -qq &&\
-  curl -sL https://deb.nodesource.com/setup_10.x | bash - &&\
+# Buster is EOL: point apt at archive.debian.org, drop dead nodesource (use distro nodejs)
+RUN sed -i "s|deb.debian.org|archive.debian.org|g; s|security.debian.org|archive.debian.org|g; /buster-updates/d" /etc/apt/sources.list &&\
+  apt-get -o Acquire::Check-Valid-Until=false update -qq &&\
   apt-get install -y build-essential libpq-dev nodejs &&\
+  rm -rf /var/lib/apt/lists/* &&\
   useradd --user-group --create-home --shell /bin/false app
 
 ENV HOME=/home/app
